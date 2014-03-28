@@ -410,11 +410,12 @@ img {
   margin: 0 0 20px;
   position: relative;
 }
-.thumbnail .title {
+.thumbnail .title, .slide-title {
   text-transform: uppercase;
   margin: 0 2em;
   display: block;
   text-indent: 0;
+  text-align: center;
 }
 .thumbnail .cover {
   position: absolute;
