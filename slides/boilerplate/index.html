@@ -10,11 +10,11 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="../assets/gccss/reveal.min.css">
-		<link rel="stylesheet" href="../assets/gccss/theme/default.css" id="theme">
+		<link rel="stylesheet" href="../assets/ccss/reveal.min.css">
+		<link rel="stylesheet" href="../assets/ccss/theme/default.css" id="theme">
 
 		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="../assets/gclib/css/zenburn.css">
+		<link rel="stylesheet" href="../assets/clib/css/zenburn.css">
 
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
@@ -22,13 +22,13 @@
 				var link = document.createElement( 'link' );
 				link.rel = 'stylesheet';
 				link.type = 'text/css';
-				link.href = '../assets/gccss/print/pdf.css';
+				link.href = '../assets/ccss/print/pdf.css';
 				document.getElementsByTagName( 'head' )[0].appendChild( link );
 			}
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="../assets/gclib/js/html5shiv.js"></script>
+		<script src="../assets/clib/js/html5shiv.js"></script>
 		<![endif]-->
 	</head>
 
@@ -352,8 +352,8 @@ function linkify( selector ) {
 
 		</div>
 
-		<script src="../assets/gclib/js/head.min.js"></script>
-		<script src="../assets/gcjs/reveal.min.js"></script>
+		<script src="../assets/clib/js/head.min.js"></script>
+		<script src="../assets/cjs/reveal.min.js"></script>
 
 		<script>
 
@@ -372,12 +372,12 @@ function linkify( selector ) {
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: '../assets/gclib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '../assets/gcplugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../assets/gcplugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '../assets/gcplugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '../assets/gcplugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: '../assets/gcplugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: '../assets/clib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../assets/cplugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/cplugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../assets/cplugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../assets/cplugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: '../assets/cplugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
