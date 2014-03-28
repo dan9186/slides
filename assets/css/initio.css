@@ -105,7 +105,7 @@ a:hover {
   background: #f4f4f4 url(../img/bg_head.jpg) top center;
   background-size: cover;
   color: #7C7C7C;
-  padding: 30px 0 35px 0;
+  padding: 90px 0 95px 0;
 }
 #head img.img-circle {
   display: block;
@@ -137,6 +137,9 @@ a:hover {
 }
 #head .tagline a {
   color: #5E5E5E;
+}
+#head #logo .title{
+	color: #DBDBDB;
 }
 .home #head {
   padding: 90px 0;
@@ -171,7 +174,8 @@ a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  opacity: .85;
+  opacity: .90;
+  z-index: 999;
 }
 .navbar-collapse {
   -webkit-border-radius: 0;
