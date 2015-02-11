@@ -105,7 +105,7 @@ a:hover {
   background: #f4f4f4 url(../img/bg_head.jpg) top center;
   background-size: cover;
   color: #7C7C7C;
-  padding: 90px 0 95px 0;
+  padding: 180px 0 180px 0;
 }
 #head img.img-circle {
   display: block;
@@ -114,6 +114,18 @@ a:hover {
   overflow: hidden;
   border: 9px solid rgba(0, 0, 0, 0.05);
   margin: 0 auto;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
+}
+#head img.img-circle:hover{
+-moz-transform: scale(2);
+-webkit-transform: scale(2);
+-o-transform: scale(2);
+-ms-transform: scale(2);
+transform: scale(2);
 }
 #head .title {
   font-family: Alice, Georgia, serif;
@@ -775,6 +787,24 @@ footer.entry-meta .meta-in {
   text-transform: uppercase;
   color: #ccc;
   margin: 0 0 20px;
+}
+.widget-body .fa-inverse{
+	color: #232323;
+}
+.widget-body a:hover{
+	text-decoration: none;
+	-moz-transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-o-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	transform: scale(1.5);
+}
+.widget-body a{
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+  transition: 1s ease;
 }
 #underfooter {
   background: #191919;
