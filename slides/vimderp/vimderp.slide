@@ -1,0 +1,58 @@
+Vimderp
+Making Vim a little less derpy
+2 Apr 2015
+Tags: 
+
+Daniel Hess
+Systems Integration Engineer, Monsoon Commerce
+dhess@monsooncommerce.com
+dan@danielhess.me
+http://monsooncommerce.com
+@dan9186
+
+* Vim Is Not Vi
+
+* The Difference
+Vim is almost a complete superset of vi
+
+Vim adds onto those features. Here are a some of the extended vim features:
+
+Vim has been ported to a much wider range of OS's than vi.
+Vim includes support (syntax highlighting, code folding, etc) for several popular programming languages (C/C++, Python, Perl, shell, etc).
+Vim integrates with cscope.
+Vim can be used to edit files using network protocols like SSH and HTTP.
+Vim includes multilevel undo/redo.
+Vim allows the screen to be split for editing multiple files.
+Vim can edit files inside a compressed archive (gzip, zip, tar, etc).
+Vim includes a built in diff for comparing files (vimdiff).
+Vim includes support for plugins, and finer control over config and startup files.
+Vim can be scripted with vimscript, or with an external scripting language (e.g. python, perl, shell).
+
+
+* Modes
+
+* Modes
+_Normal_
+Standard navigation, default mode
+
+_Insert_
+Adding/editing text
+
+_Visual_
+Text selections
+
+_Command-line_
+Editor commands
+
+* Normal Mode
+
+* Insert Mode
+Adding/editing text. The main difference from vi is that many important "normal" commands are also available in insert mode
+
+* Visual Mode
+
+* Command-line Mode
+
+* Slides available on GitHub
+
+.link http://slides.danielhess.me
