@@ -1,7 +1,7 @@
 Vimderp
 Making Vim a little less derpy
 2 Apr 2015
-Tags: 
+Tags:
 
 Daniel Hess
 dhess@monsooncommerce.com
@@ -62,7 +62,7 @@ As you learn shortcuts, you will transfer more of the editing work to computer
 
 When in doubt press ESC
 
-The concept of the current mode is fundamental 
+The concept of the current mode is fundamental
 
 Vim is not a WYSIWYG, consider LaTeX for that
 
@@ -98,46 +98,152 @@ Right
 
 	l
 
+* Directing The Cursor (Cont)
+Next word
+
+	w
+
+Previous word
+
+	b
+
+Hard beggining of the line
+
+	0
+
+Soft begginning of the line
+
+	^
+
+End of the line
+
+	$
+
+* Directing The Cursor (Cont)
+Go to last line
+
+	G
+
+Go to first line
+
+	gg
+
+Go to the 5th line
+
+	5G
+
+Notice the exception to the capital rule
 
 
 * Editing Text
 
-* Deleting
-	current word
-	remainder of line
-	current line
-	N lines
-
-* Moving
-	paste
-		before cursor
-		after cursor
-
-* Copying
-	current line
-	N lines
-
-* Selecting
-Also know as visual mode
-	line-mode
-	column-mode
-
 * Entering Insert Mode
 
-Insert, starts editing at the cursors current location
+"insert" starts editing at the cursors current location
 
 	i
 
-Append, starts editing one space after the cursor
+"append" starts editing one space after the cursor
 
 	a
 
-Open, opens a new line and starts editing
+"open" opens a new line and starts editing
 
 	o
 
-*NOTE:*Don't*forget*about*the*capital*versions!*
+"change" changes a specified number of items (characters, words, whole line)
 
+	c
+
+* The capital versions
+"insert" moves to the begging of the line
+"append" moves to the end of the line
+"open" a line above
+"change" from the cursor to the end of the line
+
+* Direction and Editing
+Combined with directional commands, "change", "delete", and "yank" can make for much faster edits
+
+To the end of a word
+
+	cw
+
+The next two words
+
+	c2w
+
+To the end of the line
+
+	c$
+
+* Deleting Text
+_d_ is for "delete"
+
+Current word
+
+	dw
+
+To end of line
+
+	D
+
+Current line
+
+	dd
+
+Twenty lines from the cursor down
+
+	d20d
+
+*Keep*in*mind* the most recent delete is also put to the copy buffer
+
+* Copying Text
+_y_ is for "yank"
+
+Copies lines to the copy buffer
+
+Current line
+
+	yy
+
+17 lines from the cursor down
+
+	y17y
+
+* Moving Text
+_p_ is for "put"
+
+Anything in the copy buffer to a line
+
+After the cursor
+
+	p
+
+Before the cursor
+
+	P
+
+*Keep*in*mind* a healthy mix of delete and put will allow cutting
+
+* Selecting
+Also know as visual mode
+
+Used to select subsets of text
+
+	v
+
+*Line*Mode*
+Used to select multiple lines
+
+	V
+
+
+*Column*Mode*
+Used to select multiline blocks not always consisting of the whole line
+
+	ctrl+v
+
+Combined with insert, append, delete, and put this makes a powerful multicontent editing method
 
 * Searching
 
@@ -186,7 +292,17 @@ Searching backward:
 
 * HERE BE DRAGONS
 
-* It's A Trap
+* Chaining actions
+
+Chaning navigation and action commands together can do some pretty impressive things very quickly
+
+Reindent entire buffer
+
+	gg=G
+
+* Backspaces
+
+.image img/its-a-trap.jpg
 
 Depending on the type of terminal you are using, backspace may erase what you've previously typed or may just back up
 
@@ -204,6 +320,18 @@ Send command back to the shell
 	:!go test
 
 
+* The Buffer
+
+* Saving
+
+Never editing a live file, always working on a temporary file loadded into a buffer
+
+Changes do not affect the original file until saved
+
+* Lines
+A line is not necessarily the same length as the visible line on the screen
+
+
 * Customizing
 
 * Using With Golang
@@ -213,14 +341,6 @@ Send command back to the shell
 	auto-complete
 	tabs/tabedit
 
-
-* Saving
-
-* The Buffer
-
-Never editing a live file, always working on a temporary file loadded into a buffer
-
-Changes do not affect the original file until saved
 
 * Slides available on GitHub
 
