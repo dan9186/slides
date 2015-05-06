@@ -4,59 +4,113 @@ Making Vim a little less derpy
 Tags: 
 
 Daniel Hess
-Systems Integration Engineer, Monsoon Commerce
 dhess@monsooncommerce.com
 dan@danielhess.me
 http://monsooncommerce.com
 @dan9186
 
-* Vim Is Not Vi
+
+* Religious Wars
+_"Learn_an_editor_that_suits_your_needs_really_well,_don't_take_any_s#!t_from_anyone_who_tells_you_it's_terrible,_and_always_be_open_to_new_tools."_
+[[https://twitter.com/joepferguson][@joepferguson]]
+
+* Vi vs Vim
 
 
-* Vim additions
-- ported to a much wider range of OS's than vi
+* Vi
+The visual mode of the line editor *ex*
+
+- common place on most Unix systems
+- relevant for when you shell into a box
+
+* Vim
+Stands for *Vi*IMproved*
+Vim is considered to be a superset of Vi
+
 - support for syntax highlighting, code folding
-- integration with cscope
-- edit files using network protocols like SSH and HTTP
 - multilevel undo/redo
 - screen splitting
 - edit files inside a compressed archive
 - built in diff (vimdiff)
 - support for plugins
-- scripting with vimscript
 
 
-* Modes
+* Basic Operation
+Tasks are done in one of four modes: _normal_,_insert_,_visual_,_command_
 
+Never editing a live file, always working on a temporary file loadded into a buffer
 
-* Modes
-_Normal_
-Standard navigation, default mode
+Changes do not affect the original file until saved
 
-_Insert_
-Adding/editing text
+Vim is not a WYSIWYG, consider LaTeX for that
 
-_Visual_
-Text selections
-
-_Command-line_
-Editor commands
+Can do minimal formatting of content
 
 
 * Normal Mode
 
+* Normal Mode
+As you learn shortcuts, you will transfer more of the editing work to computer
 
-* What Can You Do?
+- default or initial mode
+- case sensative, but do similar actions
+- not echoed to the screen
+- do not require `ENTER` after a command
+
+* Normal Keyboard
+_two_different_keyboards_
+
 .image img/vim-normal-mode.png
+
+* Exceptions To The Rule
+Bottom-line commands, preceded by different symbols
+
+Searching forward:
+
+	/StringToMatch
+
+Searching backward:
+
+	?StringToMatch
+
+Executing Ex Commands
+
+	:command
 
 
 * Insert Mode
 
+* Insert Mode
+Add and edit all the text you want
 
-* What Can You Do?
-Access with _a_ or _i_
+- enter by using command mode actions
+- not always needed to change text
+
+* Entering Insert Mode
+
+Insert, starts editing at the cursors current location
+
+	i
+
+Append, starts editing one space after the cursor
+
+	a
+
+Open, opens a new line and starts editing
+
+	o
+
+*NOTE:*Don't*forget*about*the*capital*versions!*
+
+
+* HERE BE DRAGONS
 
 * Visual Mode
+
+
+* Visual Mode
+Select lines or blocks of text
+
 
 * Command-line Mode
 
