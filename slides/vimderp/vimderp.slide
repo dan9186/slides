@@ -35,56 +35,92 @@ Vim is considered to be a superset of Vi
 - support for plugins
 
 
-* Basic Operation
-Tasks are done in one of four modes: _normal_,_insert_,_visual_,_command_
+* Modus Operandi
 
-Never editing a live file, always working on a temporary file loadded into a buffer
+* Modes
 
-Changes do not affect the original file until saved
-
-Vim is not a WYSIWYG, consider LaTeX for that
-
-Can do minimal formatting of content
-
-
-* Normal Mode
-
-* Normal Mode
-As you learn shortcuts, you will transfer more of the editing work to computer
-
+_Normal_
 - default or initial mode
 - case sensative, but do similar actions
 - not echoed to the screen
 - do not require `ENTER` after a command
 
-* Normal Keyboard
-_two_different_keyboards_
+_Insert_
+- add and edit all the text you want
+- enter by using command mode actions
+- not always needed to change text
+
+_Visual_
+- select lines or blocks of text
+
+_Command_
+- more complex line editing commands
+- can issue shell commands
+
+* Keep These in Mind
+As you learn shortcuts, you will transfer more of the editing work to computer
+
+When in doubt press ESC
+
+The concept of the current mode is fundamental 
+
+Vim is not a WYSIWYG, consider LaTeX for that
+
+* Two Different Keyboards
 
 .image img/vim-normal-mode.png
 
-* Exceptions To The Rule
-Bottom-line commands, preceded by different symbols
+* Follow The Patern
 
-Searching forward:
+There are a few exceptions, but gennerally speaking all tasks follow the same pattern
 
-	/StringToMatch
-
-Searching backward:
-
-	?StringToMatch
-
-Executing Ex Commands
-
-	:command
+Most commands you can preceed with a number to multiple the action
 
 
-* Insert Mode
+* Navigation
 
-* Insert Mode
-Add and edit all the text you want
+* Directing The Cursor
+You can use the arrow keys, backspace, and enter, but they are out of the way
 
-- enter by using command mode actions
-- not always needed to change text
+Left
+
+	h
+
+Down
+
+	j
+
+Up
+
+	k
+
+Right
+
+	l
+
+
+
+* Editing Text
+
+* Deleting
+	current word
+	remainder of line
+	current line
+	N lines
+
+* Moving
+	paste
+		before cursor
+		after cursor
+
+* Copying
+	current line
+	N lines
+
+* Selecting
+Also know as visual mode
+	line-mode
+	column-mode
 
 * Entering Insert Mode
 
@@ -103,16 +139,88 @@ Open, opens a new line and starts editing
 *NOTE:*Don't*forget*about*the*capital*versions!*
 
 
+* Searching
+
+* The Next One
+You must always be normal mode to use searching
+
+The next occurrance
+
+	n
+
+The previous occurrance
+
+	N
+
+The first occurrance
+
+	ggn
+
+The last occurrance
+
+	GN
+
+* Basic Searching
+Searching forward:
+
+	/StringToMatch
+
+Searching backward:
+
+	?StringToMatch
+
+Add a _\c_ to do a case insensitive searching
+
+* Current Word
+Match the word at the cursor
+
+Searching forward:
+
+	*
+
+Searching backward:
+
+	#
+
+
+
 * HERE BE DRAGONS
 
-* Visual Mode
+* It's A Trap
+
+Depending on the type of terminal you are using, backspace may erase what you've previously typed or may just back up
 
 
-* Visual Mode
-Select lines or blocks of text
+* Commands
+
+* Executing Commands
+
+Executing Ex Commands
+
+	:command
+
+Send command back to the shell
+
+	:!go test
 
 
-* Command-line Mode
+* Customizing
+
+* Using With Golang
+	go syntax hilighting
+	godef go to definition
+	syntastic/pathogen
+	auto-complete
+	tabs/tabedit
+
+
+* Saving
+
+* The Buffer
+
+Never editing a live file, always working on a temporary file loadded into a buffer
+
+Changes do not affect the original file until saved
 
 * Slides available on GitHub
 
