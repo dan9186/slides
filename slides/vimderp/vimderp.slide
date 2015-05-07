@@ -176,8 +176,28 @@ Chane entire line
 * Replacing Text
 _r_ is for "replace"
 
+Replace character under cursor with "u"
+
+	ru
+
+Replace the next 9 characters with "u"
+
+	9ru
+
+Overstrike mode
+
+	R
+
 * Substitute Text
 _s_ is for "substitute"
+
+Delete character under cursor and enter edit mode
+
+	s
+
+Delete 8 characters from cursor to the right and enter edit mode
+
+	8s
 
 * Deleting Text
 _d_ is for "delete"
@@ -203,6 +223,18 @@ Twenty lines from the cursor down
 
 * Backspace
 _x_ is for "backspace"
+
+Remove character under cursor
+
+	x
+
+Remove character to the left of the cursor
+
+	X
+
+Remove 7 characters
+
+	7x
 
 * Watch Out
 .image img/its-a-trap.jpg
@@ -286,7 +318,7 @@ These commands specifically leave you in insert mode for further editing text
 "append" moves to the end of the line
 "open" a line above
 "change" from the cursor to the end of the line
-"substitute" from the cursor to the end of the line
+"substitute" the entire line
 
 * Let's Try
 
