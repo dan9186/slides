@@ -288,6 +288,10 @@ These commands specifically leave you in insert mode for further editing text
 "change" from the cursor to the end of the line
 "substitute" from the cursor to the end of the line
 
+* Let's Try
+
+.link https://raw.githubusercontent.com/dan9186/slides/gh-pages/slides/vimderp/aladdin.txt Aladdin and the Wonderful Lamp
+
 
 * Searching
 
@@ -332,6 +336,9 @@ Searching backward:
 
 	#
 
+* Let's Try
+
+.link https://raw.githubusercontent.com/dan9186/slides/gh-pages/slides/vimderp/aladdin.txt Aladdin and the Wonderful Lamp
 
 
 * HERE BE DRAGONS
