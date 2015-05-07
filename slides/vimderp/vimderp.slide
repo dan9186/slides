@@ -141,6 +141,54 @@ Notice the exception to the capital rule
 .link https://raw.githubusercontent.com/dan9186/slides/gh-pages/slides/vimderp/aladdin.txt Aladdin and the Wonderful Lamp
 
 
+* Searching
+
+* The Next One
+You must always be normal mode to use searching
+
+The next occurrance
+
+	n
+
+The previous occurrance
+
+	N
+
+The first occurrance
+
+	ggn
+
+The last occurrance
+
+	GN
+
+* Basic Searching
+Searching forward:
+
+	/StringToMatch
+
+Searching backward:
+
+	?StringToMatch
+
+Add a _\c_ to do a case insensitive searching
+
+* Current Word
+Match the word at the cursor
+
+Searching forward:
+
+	*
+
+Searching backward:
+
+	#
+
+* Let's Try
+
+.link https://raw.githubusercontent.com/dan9186/slides/gh-pages/slides/vimderp/aladdin.txt Aladdin and the Wonderful Lamp
+
+
 * Editing Text
 
 * Direction and Editing
@@ -324,69 +372,6 @@ These commands specifically leave you in insert mode for further editing text
 
 .link https://raw.githubusercontent.com/dan9186/slides/gh-pages/slides/vimderp/aladdin.txt Aladdin and the Wonderful Lamp
 
-
-* Searching
-
-* The Next One
-You must always be normal mode to use searching
-
-The next occurrance
-
-	n
-
-The previous occurrance
-
-	N
-
-The first occurrance
-
-	ggn
-
-The last occurrance
-
-	GN
-
-* Basic Searching
-Searching forward:
-
-	/StringToMatch
-
-Searching backward:
-
-	?StringToMatch
-
-Add a _\c_ to do a case insensitive searching
-
-* Current Word
-Match the word at the cursor
-
-Searching forward:
-
-	*
-
-Searching backward:
-
-	#
-
-* Let's Try
-
-.link https://raw.githubusercontent.com/dan9186/slides/gh-pages/slides/vimderp/aladdin.txt Aladdin and the Wonderful Lamp
-
-
-* HERE BE DRAGONS
-
-* Chaining actions
-
-Chaning navigation and action commands together can do some pretty impressive things very quickly
-
-Transpose two characters
-
-	xp
-
-Reindent entire buffer
-
-	gg=G
-
 * Commands
 
 * Executing Commands
@@ -400,6 +385,9 @@ Send command back to the shell
 	:!go test
 
 
+* HERE BE DRAGONS
+
+
 * The Buffer
 
 * Saving
@@ -408,9 +396,35 @@ Never editing a live file, always working on a temporary file loadded into a buf
 
 Changes do not affect the original file until saved
 
+With ex commands
+
+	:w
+
+From normal mode
+
+	ZZ
+
 * Lines
 A line is not necessarily the same length as the visible line on the screen
 
+
+* Time Savers
+
+* Chaining actions
+
+Chaning navigation and action commands together can do some pretty impressive things very quickly
+
+Transpose two characters
+
+	xp
+
+Reindent entire buffer
+
+	gg=G
+
+Insert 50 asterisks
+
+	50i*
 
 * Customizing
 
