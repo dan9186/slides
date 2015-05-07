@@ -72,10 +72,12 @@ Vim is not a WYSIWYG, consider LaTeX for that
 
 * Follow The Patern
 
-There are a few exceptions, but gennerally speaking all tasks follow the same pattern
+There are a few exceptions, but gennerally speaking all tasks follow one of two patterns
 
-Most commands you can preceed with a number to multiple the action
+	(command)(number)(text object)
+	(number)(command)(text object)
 
+_Note:_Some_commands_allow_for_shortcuts_
 
 * Navigation
 
@@ -137,44 +139,41 @@ Notice the exception to the capital rule
 
 * Editing Text
 
-* Entering Insert Mode
-
-"insert" starts editing at the cursors current location
-
-	i
-
-"append" starts editing one space after the cursor
-
-	a
-
-"open" opens a new line and starts editing
-
-	o
-
-"change" changes a specified number of items (characters, words, whole line)
-
-	c
-
-* The capital versions
-"insert" moves to the begging of the line
-"append" moves to the end of the line
-"open" a line above
-"change" from the cursor to the end of the line
-
 * Direction and Editing
-Combined with directional commands, "change", "delete", and "yank" can make for much faster edits
+Combined with directional commands, many of the editing can make for much faster changes
 
 To the end of a word
 
 	cw
 
-The next two words
+Delete 5 characters
 
-	c2w
+	5x
 
-To the end of the line
+Replace the next 3 characters with "|"
 
-	c$
+	3r|
+
+* Changing Text
+_c_ is for "change"
+
+Change previous word
+
+	cb
+
+Change from cursor to end of line
+
+	C
+
+Chane entire line
+
+	cc
+
+* Replacing Text
+_r_ is for "replace"
+
+* Substitute Text
+_s_ is for "substitute"
 
 * Deleting Text
 _d_ is for "delete"
@@ -186,6 +185,7 @@ Current word
 To end of line
 
 	D
+	d$
 
 Current line
 
@@ -197,6 +197,14 @@ Twenty lines from the cursor down
 
 *Keep*in*mind* the most recent delete is also put to the copy buffer
 
+* Backspace
+_x_ is for "backspace"
+
+* Watch Out
+.image img/its-a-trap.jpg
+
+Depending on the type of terminal you are using, backspace may erase what you've previously typed or may just back up
+
 * Copying Text
 _y_ is for "yank"
 
@@ -205,6 +213,7 @@ Copies lines to the copy buffer
 Current line
 
 	yy
+	Y
 
 17 lines from the cursor down
 
@@ -237,13 +246,44 @@ Used to select multiple lines
 
 	V
 
-
 *Column*Mode*
 Used to select multiline blocks not always consisting of the whole line
 
 	ctrl+v
 
 Combined with insert, append, delete, and put this makes a powerful multicontent editing method
+
+* Entering Insert Mode
+These commands specifically leave you in insert mode for further editing text
+
+"insert" starts editing at the cursors current location
+
+	i
+
+"append" starts editing one space after the cursor
+
+	a
+
+"open" opens a new line and starts editing
+
+	o
+
+* Entering Insert Mode (cont)
+"change" changes a specified number of items (characters, words, whole line)
+
+	c
+
+"substitute" deletes the character under the cursor and starts editing
+
+	s
+
+* The capital versions
+"insert" moves to the begging of the line
+"append" moves to the end of the line
+"open" a line above
+"change" from the cursor to the end of the line
+"substitute" from the cursor to the end of the line
+
 
 * Searching
 
@@ -296,16 +336,13 @@ Searching backward:
 
 Chaning navigation and action commands together can do some pretty impressive things very quickly
 
+Transpose two characters
+
+	xp
+
 Reindent entire buffer
 
 	gg=G
-
-* Backspaces
-
-.image img/its-a-trap.jpg
-
-Depending on the type of terminal you are using, backspace may erase what you've previously typed or may just back up
-
 
 * Commands
 
