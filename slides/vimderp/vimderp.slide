@@ -384,6 +384,9 @@ These commands specifically leave you in insert mode for further editing text
 
 .link https://raw.githubusercontent.com/dan9186/slides/gh-pages/slides/vimderp/aladdin.txt Aladdin and the Wonderful Lamp
 
+
+* HERE BE DRAGONS
+
 * Commands
 
 * Executing Commands
@@ -396,16 +399,24 @@ Send command back to the shell
 
 	:!go test
 
+Open a shell
 
-* HERE BE DRAGONS
+	:sh
 
 
 * The Buffer
 
-* Saving
+* Opening Files
+Open a new file
+
+	vim [filename]
 
 Never editing a live file, always working on a temporary file loadded into a buffer
 
+* Lines
+A line is not necessarily the same length as the visible line on the screen
+
+* Saving Files
 Changes do not affect the original file until saved
 
 With ex commands
@@ -415,9 +426,6 @@ With ex commands
 From normal mode
 
 	ZZ
-
-* Lines
-A line is not necessarily the same length as the visible line on the screen
 
 
 * Time Savers
