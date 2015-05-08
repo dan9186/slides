@@ -191,6 +191,18 @@ Searching backward:
 
 * Editing Text
 
+* Uh Oh
+
+.image img/ctrlz.png
+
+Undo
+
+	u
+
+Redo
+
+	ctrl r
+
 * Direction and Editing
 Combined with directional commands, many of the editing can make for much faster changes
 
