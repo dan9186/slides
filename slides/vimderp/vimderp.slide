@@ -389,6 +389,13 @@ These commands specifically leave you in insert mode for further editing text
 
 * Commands
 
+* Command Mode
+Vi/Vim's underlying utility is ed and ex.  Command mode provides access to those actions.
+
+- Write the buffer
+- Complex substitutes
+- Sending commands back to the shell
+
 * Executing Commands
 
 Executing Ex Commands
@@ -413,6 +420,19 @@ Open a new file
 
 Never editing a live file, always working on a temporary file loadded into a buffer
 
+* Quitting
+Return to the last saved version of a file
+
+	:e!
+
+Quit
+
+	:q
+
+Quit with emphasis
+
+	:q!
+
 * Lines
 A line is not necessarily the same length as the visible line on the screen
 
@@ -430,8 +450,16 @@ From normal mode
 
 * Time Savers
 
-* Chaining actions
+* Handy Actions
+Join two adjacent lines with a space
 
+	J
+
+Repeat the last command
+
+	.
+
+* Chaining Actions
 Chaning navigation and action commands together can do some pretty impressive things very quickly
 
 Transpose two characters
