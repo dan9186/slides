@@ -79,6 +79,79 @@ There are a few exceptions, but gennerally speaking all tasks follow one of two 
 
 _Note:_Some_commands_allow_for_shortcuts_
 
+* Commands
+
+* Command Mode
+Vi/Vim's underlying utility is ed and ex.  Command mode provides access to those actions.
+
+- Write the buffer
+- Complex substitutes
+- Sending commands back to the shell
+
+* Executing Commands
+
+Executing Ex Commands
+
+	:command
+
+Send command back to the shell
+
+	:!go test
+
+Open a shell
+
+	:sh
+
+
+* The Buffer
+
+* Status Line
+Always provides some detail about what is happening.
+
+At minimum it can show you if you're in normal or insert mode.
+
+With some modification it can show you what mode, additional options, git branch, file name, formatting, location in the file, and many more.
+
+* Opening Files
+Open a new file
+
+	vim [filename]
+
+Never editing a live file, always working on a temporary file loadded into a buffer
+
+* Quitting
+Return to the last saved version of a file
+
+	:e!
+
+Quit
+
+	:q
+
+Quit with emphasis
+
+	:q!
+
+* Saving Files
+Changes do not affect the original file until saved
+
+With ex commands
+
+	:w
+
+From normal mode
+
+	ZZ
+
+* Interesting Options
+- Tabs
+- Splits
+- Syntax highlighting
+- Line numbers
+- Auto indenting
+- Tabs vs Spaces
+
+
 * Navigation
 
 * Directing The Cursor
@@ -385,69 +458,6 @@ These commands specifically leave you in insert mode for further editing text
 .link https://raw.githubusercontent.com/dan9186/slides/gh-pages/slides/vimderp/aladdin.txt Aladdin and the Wonderful Lamp
 
 
-* HERE BE DRAGONS
-
-* Commands
-
-* Command Mode
-Vi/Vim's underlying utility is ed and ex.  Command mode provides access to those actions.
-
-- Write the buffer
-- Complex substitutes
-- Sending commands back to the shell
-
-* Executing Commands
-
-Executing Ex Commands
-
-	:command
-
-Send command back to the shell
-
-	:!go test
-
-Open a shell
-
-	:sh
-
-
-* The Buffer
-
-* Opening Files
-Open a new file
-
-	vim [filename]
-
-Never editing a live file, always working on a temporary file loadded into a buffer
-
-* Quitting
-Return to the last saved version of a file
-
-	:e!
-
-Quit
-
-	:q
-
-Quit with emphasis
-
-	:q!
-
-* Lines
-A line is not necessarily the same length as the visible line on the screen
-
-* Saving Files
-Changes do not affect the original file until saved
-
-With ex commands
-
-	:w
-
-From normal mode
-
-	ZZ
-
-
 * Time Savers
 
 * Handy Actions
@@ -474,15 +484,10 @@ Insert 50 asterisks
 
 	50i*
 
-* Customizing
 
-* Using With Golang
-	go syntax hilighting
-	godef go to definition
-	syntastic/pathogen
-	auto-complete
-	tabs/tabedit
+* Vimderp
 
+.link https://github.com/dan9186/vimderp
 
 * Slides available on GitHub
 
