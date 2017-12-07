@@ -1,0 +1,40 @@
+Gotchas In Go
+Different hangups in go that catch most
+06 Dec 2017
+Tags:
+
+Daniel Hess
+Senior Software Engineer
+Ion Channel
+
+http://www.ionchannel.io
+dan.hess@ionchannel.io
+
+daniel@danielhess.me
+@dan9186
+
+* Who Am I?
+
+- Developed microservices in the cloud
+- Practitioner of agile software development
+- Always learning more to share more
+
+* Postfix Increments
+
+* Postfix Increments
+- increments are statements, not operators
+.code code/postfix/postfix.go
+
+* Defers
+
+* Defers
+- executed in last-in-first-out order
+.play code/defers/stacking.go /^func main/,/^}/
+- are not executed if the main routine exits before they are run
+.play code/defers/exit.go /^func main/,/^}/
+
+* Questions?
+
+* Slides available on GitHub
+
+.link http://danielhess.me/slides
