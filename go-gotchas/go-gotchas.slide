@@ -33,6 +33,31 @@ daniel@danielhess.me
 - are not executed if the main routine exits before they are run
 .play code/defers/exit.go /^func main/,/^}/
 
+* Pointers
+
+* Pointers
+- ranging over pointers, things often appear normal
+.play code/pointers/range-norm.go /^func main/,/^}/
+
+* Pointers
+- even with a slice of pointers
+.play code/pointers/range-sop.go /^func main/,/^}/
+
+* Pointers
+- value var of `range` passes by value
+- the pointer of the value object will point at the location of the range variable
+.play code/pointers/range-why.go /^func main/,/^}/
+- usually goes unnoticed
+
+* Pointers
+- usually we do a little more appending building up data
+.play code/pointers/sop-broken.go /^func main/,/^}/
+- a slice of the same address is made
+
+* Pointers
+- leverage the index returned by range instead
+.play code/pointers/sop-fix.go /^func main/,/^}/
+
 * Questions?
 
 * Slides available on GitHub
