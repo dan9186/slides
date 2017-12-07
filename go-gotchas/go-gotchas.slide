@@ -19,6 +19,12 @@ daniel@danielhess.me
 - Practitioner of agile software development
 - Always learning more to share more
 
+* Linting
+
+* Linting
+For the love of all things holy, DO NOT use an editor without `go fmt` automatically run for you.  Consider turning on all the meta linters you possibly can.
+.image img/fancy-gopher.jpg 675 _
+
 * Idioms
 
 * Idioms
@@ -27,7 +33,6 @@ daniel@danielhess.me
 - stick with the community
 - try to be as idiomatic as possible, understand first then diverge
 - write Go like Go, you don't try to use Perl idioms to write JS, give Go the same respect
-- make sure to use `go fmt`
 
 * Idioms
 - work from your `$GOPATH`
