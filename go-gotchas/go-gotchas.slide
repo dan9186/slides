@@ -23,7 +23,7 @@ daniel@danielhess.me
 
 * Postfix Increments
 - increments are statements, not operators
-.code code/postfix/postfix.go
+.play code/postfix/postfix.go /^func main/,/^}/
 
 * Defers
 

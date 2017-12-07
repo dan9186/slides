@@ -1,4 +1,6 @@
-func count() {
+package main
+
+func main() {
 	count := 0
 	fmt.Printf("Count: %v\n", count)
 
