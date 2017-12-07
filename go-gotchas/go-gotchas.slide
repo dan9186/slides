@@ -33,6 +33,17 @@ daniel@danielhess.me
 - are not executed if the main routine exits before they are run
 .play code/defers/exit.go /^func main/,/^}/
 
+* Scope
+
+* Scope
+- don't over use the `:=` operator
+.play code/scope/excessive-assignment.go /^func main/,/^}/
+
+* Scope
+- inline assignment and checking can impact your scope unexpectedly
+- only has scope inside the if statement
+.play code/scope/inline.go /^func main/,/^}/
+
 * Pointers
 
 * Pointers
