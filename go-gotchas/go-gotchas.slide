@@ -45,6 +45,20 @@ For the love of all things holy, DO NOT use an editor without `go fmt` automatic
 	Dev: But my projects directory!
 	Go: Use $GOPATH
 
+* Errors
+
+* Errors (Which failed?)
+.play code/errors/no-context.go /^func main/,/return \&user.*\n}/
+
+* Errors
+- Never return naked errors
+- Including your own context clues is always a good idea
+- Makes it difficult to find where your code fails at 3rd party interactions
+- Easily solved with `fmt.Errorf()`
+
+* Errors (Context Clues)
+.play code/errors/context.go /^func main/,/return \&user.*\n}/
+
 * Postfix Increments
 
 * Postfix Increments
