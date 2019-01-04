@@ -1,0 +1,48 @@
+Leveling Up Your Git
+It's easy when...
+10 Dec 2017
+Tags:
+
+Daniel Hess
+Senior Software Engineer
+Ion Channel
+
+http://www.ionchannel.io
+dan.hess@ionchannel.io
+
+daniel@danielhess.me
+@dan9186
+
+* Who Am I?
+
+- Developed microservices in the cloud
+- Practitioner of agile software development
+- Always learning more to share more
+
+* Who's This For?
+
+You know how to:
+
+- Create a repo
+- Add commits
+- Familiar with feature branches
+
+* Git's easier when...
+We've all seen or heard it
+.image homeomorphic_endofunctors.jpg
+
+* Questions?
+
+* Slides available on GitHub
+
+.link https://github.com/dan9186/slides
+.link http://danielhess.me/slides
+
+
+
+
+
+- how you can make commits early and often
+- Don't check in commented out code, make a commit with it removed.  You can always go back and get those from history.
+- squashing commits when you're ready to merge something.
+- think of the people reviewing your code, they need to be able to parse the diff
