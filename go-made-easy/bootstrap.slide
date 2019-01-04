@@ -1,0 +1,73 @@
+Go Made Easy
+Witty subtitle
+5 Apr 2018
+Tags:
+
+Daniel Hess
+Senior Software Engineer
+Ion Channel
+
+http://www.ionchannel.io
+dan.hess@ionchannel.io
+
+daniel@danielhess.me
+@dan9186
+
+* Who Am I?
+
+- Developed microservices in the cloud
+- Practitioner of agile software development
+- Always learning more to share more
+
+
+* Simple Made Easy
+
+.link https://www.infoq.com/presentations/Simple-Made-Easy
+
+
+* Simple vs Easy
+
+- simple and easy get used interchangeably, but they're not
+- easy vs hard
+- simple vs complex
+
+
+* Limits
+
+- only so much mental capacity
+- the more intertwined something is the more there is to consider
+- more complex means harder to understand
+
+
+* Why people try to make things easy
+
+- lots of speed early in the game
+- programmer convenience
+- don't want to learn things unfamiliar to them
+  - using an ORM rather than learning SQL
+
+
+* Where people try to make go easy
+
+- reduced number of lines from 3 to 1
+- hide away simple things
+
+
+* Misconceptions
+
+- hiding simple things means less to remember
+- brevity is hard and therefor is not important
+
+
+* Benefits of Simple
+
+- less familiarity necessary to begin work
+- ability to reason allows changing code without fear
+
+
+* Questions?
+
+* Slides available on GitHub
+
+.link https://github.com/dan9186/slides
+.link http://danielhess.me/slides
