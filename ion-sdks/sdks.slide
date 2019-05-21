@@ -1,0 +1,205 @@
+Ion SDKs
+Witty subtitle here
+21 May 2019
+Tags:
+
+Daniel Hess
+Software Engineer
+Ion Channel
+
+https://www.ionchannel.io
+dan.hess@ionchannel.io
+
+* API vs SDK
+
+* API
+
+- an interface to a core set of functionality
+- http over tcp in our case
+- ideally a consistent means of communication about a set of topics
+.image img/api.png
+
+
+* SDK
+
+- toolkit for interacting with an API
+- abstracts away certain concerns
+- can provide documentation/examples of interacting with an API
+- internals can change as needed
+.image img/sdk.png
+
+
+* Our SDKs
+
+
+* Ionic
+.link https://github.com/ion-channel/ionic
+.link https://godoc.org/github.com/ion-channel/ionic docs
+- Covers almost our entire API
+- Currently lacking integration tests
+- Auto generated docs
+.image img/fancy-gopher.jpg 375 _
+
+
+* Anion
+.link https://github.com/ion-channel/anion
+- Minimal coverage of our API
+- Leveraging integration tests to remove them from the UI
+.image img/js.png 300 _
+
+
+* Pyionic (Misspelled)
+.link https://github.com/ion-channel/pyionic
+- We want nothing to do with this
+.image img/no.png
+
+
+* Ease
+
+
+* Get User (API)
+
+ curl -i -H "Authentication: bearer <jwthere>" \
+ https://api.ionchannel.io/v1/users/getUser?id=76af407b-bf25-4f6d-be83-52fb3797e89b
+
+ {
+   "data": {
+     "id": "76af407b-bf25-4f6d-be83-52fb3797e89b",
+     "name": "Ford",
+     "email": "towel@dontpanic.com"
+   },
+   "meta": {
+     ...
+   }
+ }
+
+- extra info to parse from response
+- remember correct authentication headers
+- which endpoint to direct request to
+
+
+* Get User (SDK)
+
+ u := client.GetUser("76af407b-bf25-4f6d-be83-52fb3797e89b", jwtVar)
+ log.Infof("found user: %v", u)
+
+ -----
+
+ found user: {
+   "id": "76af407b-bf25-4f6d-be83-52fb3797e89b",
+   "name": "Ford",
+   "email": "towel@dontpanic.com"
+ }
+
+- no response shape to deal with
+- only provide jwt
+- endpoint abstracted away
+
+
+* Get Projects (API)
+
+ curl -i -H "Authentication: bearer <jwthere>" \
+ https://api.ionchannel.io/v1/projects/getProjects\
+ ?team_id=80ee3d6e-eeb3-44c5-b1d3-9f6d00e27289&offset=10&limit=20
+
+ {
+   "data": [
+     { "id": "5d464b39-af0f-4e7b-833f-7c062f4ac835", ...  },
+     { "id": "30dfa1e6-fc10-452c-b3a9-919c839d28ca", ...  },
+     ...
+   ],
+   "meta": {
+     "total_count": 5,
+     ...
+   }
+ }
+
+- required fields must be remembered
+- even more response info
+- pagination to deal with
+
+
+* Get Projects (SDK)
+
+ page := pagination.New(10, 20)
+ prjs := client.GetProjects("80ee3d6e-eeb3-44c5-b1d3-9f6d00e27289", jwtVar, page)
+
+ log.Infof("found project: %v", len(prjs))
+ log.Infof("first project: %v", prjs[0].ID)
+
+ -----
+
+ found projects: 5
+ first project: "5d464b39-af0f-4e7b-833f-7c062f4ac835"
+
+- required fields are part of function signature
+- individual access of returned objects
+- pagination out of sight out of mind
+
+
+* Create Project (API)
+
+ curl -i -X POST -H "Authentication: bearer <jwthere>" -d @newproject.json\
+ https://api.ionchannel.io/v1/projects/createProject
+
+ -----
+
+ {
+   "id": "e989db2e-4871-472e-9d45-a88954896235",
+   "name": "War Kittens",
+   "source": "bitbucket.org/war-kittens/destruction",
+   "ssh_key": "...",
+   "poc_name": "Do Not Disturb",
+   "poc_email": "destruction@killercats.com"
+ }
+
+- what are required fields?
+- must remember object shape
+
+
+* Create Project (SDK)
+
+ prj := projects.New("Grill", "gitlab.com/bobsburgers/grill", sshKeyVar, "Bob", "bob@burgers.com")
+
+ if !prj.Valid() {
+   ...
+ }
+
+ err := client.CreatProject(prj, jwtVar)
+ if err != nil {
+   ...
+ }
+
+ log.Infof("project id: %v", prj.ID)
+
+ -----
+
+ project id: e989db2e-4871-472e-9d45-a88954896235
+
+- required fields enforced
+- can validate some without calling the API
+
+
+* Dogfooding
+
+
+* Dogfooding
+
+- same calls published and public
+- same object shapes published and public
+- almost impossible for our SDK to be out of sync with deployed services
+.image img/dogfood.png
+
+
+* Testing
+
+
+* Mocking
+
+- Test the service not the API
+- No need to make real network calls
+- Less to stand up and initialize for tests
+.image img/mocks.png
+
+
+* Questions?
